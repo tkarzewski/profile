@@ -25,6 +25,7 @@ export class ServicesComponent implements OnInit {
         this.isLoading = false;
       },
       error => {
+        console.error('ServicesComponent.loadServices, error -> ', error);
         this.isLoading = false;
       });
   }
