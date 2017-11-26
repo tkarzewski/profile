@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+@import "assets/css/animate.css";
+@import "assets/css/main.css";
+@import "assets/css/responsive.css";
+
+.page-title {
+    font-weight: 300;
+    margin: 30px 0 30px 0;
+    word-wrap: break-word;
+}
+.page-title:after {
+    content: "";
+    background: #009eed;
+    width: 40%;
+    max-width: 150px;
+    height: 2px;
+    display: block;
+    margin-top: 16px;
+}

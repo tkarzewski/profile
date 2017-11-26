@@ -1,0 +1,23 @@
+{
+  "name": "Karzewski",
+  "givenName": "Tobias",
+  "nationality": "label": "deutsch",
+  "dateOfBirth": "1981-22-22T10:54:36.610Z",
+  "address": {
+    "street": "Saladin-Schmitt-Str.",
+    "houseNo": "37",
+    "postalCode": "44789",
+    "city": "Bochum",
+    "country": "Deutschland"
+  },
+  "contact": {
+    "phone": "0151 / 15 49 17 93",
+    "mail": "tobias@karzewski.de"
+  },
+  "socialMedia": {
+    "xingUrl": "https://www.xing.com/profile/Tobias_Karzewski",
+    "gulpUrl": "https://www.gulp.de/gulp2/home/profil/na5nkpjhcl?4"
+  },
+  "availableFrom": "2017-03-01T10:54:36.610Z",
+  "availableTo": null
+}

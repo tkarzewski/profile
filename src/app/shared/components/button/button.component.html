@@ -1,0 +1,27 @@
+<!-- Button is of type button -->
+<button *ngIf="!link"
+        [ngClass]="classes"
+        [attr.disabled]="disabled ? 'disabled' : null"
+        [title]="title"
+        (click)="clicked($event)">
+  <ng-container *ngTemplateOutlet="labelTpl"></ng-container>
+</button>
+
+
+<!-- Button is of type link -->
+<a *ngIf="link"
+   href="javascript:"
+   [ngClass]="classes"
+   [attr.disabled]="disabled ? 'disabled' : null"
+   [title]="title"
+   (click)="clicked($event)">
+   <ng-container *ngTemplateOutlet="labelTpl"></ng-container>
+</a>
+
+
+<!-- Template for Label incl Icons within Button or Link -->
+<ng-template #labelTpl>
+  <span *ngIf="preIcon" class="fa fa-{{ preIcon }}"></span>
+  {{ label }}
+  <span *ngIf="postIcon" class="fa fa-{{ postIcon }}"></span>
+</ng-template>
