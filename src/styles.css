@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+@import "assets/css/w3.css";
+
+/* @import "~@angular/material/prebuilt-themes/indigo-pink.css"; */
+
+/* Old Stuff
 @import "assets/css/animate.css";
 @import "assets/css/main.css";
 @import "assets/css/responsive.css";
@@ -17,3 +22,4 @@
     display: block;
     margin-top: 16px;
 }
+*/

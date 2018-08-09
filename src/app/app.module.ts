@@ -10,12 +10,15 @@ import { HeaderComponent } from './header/header.component';
 import { StartComponent } from './start/start.component';
 import { ServicesComponent } from './services/services.component';
 import { ExperienceComponent } from './experience/experience.component';
-import { TechnologiesComponent } from './technologies/technologies.component';
 import { ContactComponent } from './contact/contact.component';
 import { ServicesService } from './services/shared/services/services.service';
-import { CacheInterceptor } from './shared/interceptors/cache/cache.interceptor';
-import { HttpCache } from './shared/services/cache/http-cache.service';
 import { ProjectService } from './experience/shared/services/project.service';
+import { OnepagerComponent } from './onepager/onepager.component';
+import { PersonComponent } from './person/person.component';
+import { FooterComponent } from './footer/footer.component';
+import { PersonService } from './person/shared/services/person.service';
+import { SkillsComponent } from './skills/skills.component';
+import { SkillsService } from './skills/shared/services/skills.service';
 
 
 @NgModule({
@@ -25,8 +28,11 @@ import { ProjectService } from './experience/shared/services/project.service';
     StartComponent,
     ServicesComponent,
     ExperienceComponent,
-    TechnologiesComponent,
-    ContactComponent
+    ContactComponent,
+    OnepagerComponent,
+    PersonComponent,
+    FooterComponent,
+    SkillsComponent
   ],
   imports: [
     BrowserAnimationsModule,
@@ -37,12 +43,16 @@ import { ProjectService } from './experience/shared/services/project.service';
   providers: [
     ProjectService,
     ServicesService,
+    PersonService,
+    SkillsService
+    /*
     HttpCache,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: CacheInterceptor,
       multi: true,
     }
+    */
   ],
   bootstrap: [AppComponent]
 })

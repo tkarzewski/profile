@@ -1,11 +1,11 @@
 {
   "name": "Karzewski",
   "givenName": "Tobias",
-  "nationality": "label": "deutsch",
-  "dateOfBirth": "1981-22-22T10:54:36.610Z",
+  "nationality": "deutsch",
+  "dateOfBirth": "1981-22-22",
   "address": {
-    "street": "Saladin-Schmitt-Str.",
-    "houseNo": "37",
+    "street": "Wiemelhauser Str.",
+    "houseNo": "195",
     "postalCode": "44789",
     "city": "Bochum",
     "country": "Deutschland"
@@ -18,6 +18,6 @@
     "xingUrl": "https://www.xing.com/profile/Tobias_Karzewski",
     "gulpUrl": "https://www.gulp.de/gulp2/home/profil/na5nkpjhcl?4"
   },
-  "availableFrom": "2017-03-01T10:54:36.610Z",
+  "availableFrom": "2017-03-01",
   "availableTo": null
 }

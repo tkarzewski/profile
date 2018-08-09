@@ -2,9 +2,10 @@ export class Address {
 
   street: string;
   houseNo: string;
-  postalCode: number;
+  postalCode: string;
   city: string;
   country: string;
+
 
   constructor(data?: any) {
     if (data) {
@@ -15,5 +16,4 @@ export class Address {
       this.country = data.country;
     }
   }
-
 }

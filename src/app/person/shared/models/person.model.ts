@@ -1,5 +1,5 @@
-import { Address } from './address.model';
 import { Contact } from './contact.model';
+import { Address } from './address.model';
 import { SocialMedia } from './social-media.model';
 
 export class Person {
@@ -26,10 +26,10 @@ export class Person {
         this.address = new Address(data.address);
       }
       if (data.contact) {
-        this.contact = data.contact;
+        this.contact = new Contact(data.contact);
       }
       if (data.socialMedia) {
-        this.socialMedia = data.socialMedia;
+        this.socialMedia = new SocialMedia(data.socialMedia);
       }
       if (data.availableFrom) {
         this.availableFrom = new Date(data.availableFrom);
@@ -41,3 +41,4 @@ export class Person {
   }
 
 }
+

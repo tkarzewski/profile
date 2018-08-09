@@ -1,0 +1,77 @@
+[
+  {
+    "skill": "Angular",
+    "category": "Frontend",
+    "experience": 9
+  },
+  {
+    "skill": "TypeScript",
+    "category": "Frontend",
+    "experience": 8
+  },
+  {
+    "skill": "JavaScript",
+    "category": "Frontend",
+    "experience": 9
+  },
+  {
+    "skill": "HTML",
+    "category": "Frontend",
+    "experience": 9
+  },
+  {
+    "skill": "(S)CSS",
+    "category": "Frontend",
+    "experience": 6
+  },
+  {
+    "skill": "REST",
+    "category": "Backend",
+    "experience": 8
+  },
+  {
+    "skill": "Java",
+    "category": "Backend",
+    "experience": 6
+  },
+  {
+    "skill": "PHP",
+    "category": "Backend",
+    "experience": 6
+  },
+  {
+    "skill": "DevOps (Continuous Build, Testing, Deployment)",
+    "category": "Drumherum",
+    "experience": 6
+  },
+  {
+    "skill": "Google Analytics / Google Tag Manager",
+    "category": "Drumherum",
+    "experience": 7
+  },
+  {
+    "skill": "Scrum",
+    "category": "Drumherum",
+    "experience": 8
+  },
+  {
+    "skill": "Softwareentwicklungsprozess",
+    "category": "Drumherum",
+    "experience": 5
+  },
+  {
+    "skill": "Clean Code",
+    "category": "Drumherum",
+    "experience": 7
+  },
+  {
+    "skill": "Deutsch",
+    "category": "Sprachen",
+    "experience": 10
+  },
+  {
+    "skill": "Englisch",
+    "category": "Sprachen",
+    "experience": 7
+  }
+]
