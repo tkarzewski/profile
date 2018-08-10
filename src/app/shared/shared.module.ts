@@ -1,8 +1,10 @@
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { ButtonComponent } from './components/button/button.component';
 import { LoaderComponent } from './components/loader/loader.component';
+import { HeaderComponent } from './components/header/header.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { PersonService } from './services/person/person.service';
 
 
 @NgModule({
@@ -10,13 +12,23 @@ import { LoaderComponent } from './components/loader/loader.component';
     CommonModule,
   ],
   declarations: [
-    ButtonComponent,
+    HeaderComponent,
+    FooterComponent,
     LoaderComponent
   ],
   exports: [
-    ButtonComponent,
+    HeaderComponent,
+    FooterComponent,
     LoaderComponent
   ]
 })
 export class SharedModule {
+  static forRoot(): ModuleWithProviders {
+    return {
+      ngModule: SharedModule,
+      providers: [
+        PersonService
+      ]
+    };
+  }
 }

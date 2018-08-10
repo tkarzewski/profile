@@ -1,19 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ServicesComponent } from './services/services.component';
-import { StartComponent } from './start/start.component';
-import { ExperienceComponent } from './experience/experience.component';
 import { ContactComponent } from './contact/contact.component';
-import { OnepagerComponent } from './onepager/onepager.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ImprintComponent } from './imprint/imprint.component';
 
 
 const appRoutes: Routes = [
-  { path: 'start', component: StartComponent },
-  { path: 'leistungen', component: ServicesComponent },
-  { path: 'erfahrung', component: ExperienceComponent },
   { path: 'kontakt', component: ContactComponent },
+  { path: 'impressum', component: ImprintComponent },
   { path: '', redirectTo: '/', pathMatch: 'full' },
-  { path: '**', component: OnepagerComponent }
+  { path: '**', component: ProfileComponent }
 ];
 
 @NgModule({
