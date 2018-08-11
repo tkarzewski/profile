@@ -10,6 +10,7 @@ import { ProjectService } from './projects/shared/services/project.service';
 import { SkillsService } from './skills/shared/services/skills.service';
 import { ServicesService } from './services/shared/services/services.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -21,6 +22,7 @@ import { HttpClientModule } from '@angular/common/http';
     SkillsComponent
   ],
   imports: [
+    BrowserAnimationsModule,
     HttpClientModule,
     SharedModule
   ],

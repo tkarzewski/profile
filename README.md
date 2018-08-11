@@ -1,27 +1,42 @@
 # Profile
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.4.4.
+TODO Doc
 
-## Development server
+## TODOs
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+TODOs fürs Profile
 
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- **Grundlegendes**
+  - (X) Update auf Angular 7beta
+  - (X) Caching in die Services und aus dem Interceptor
+  - ( ) Barrierefreiheit umsetzen
+- **Infrastruktur**
+  - ( ) Continuous Build
+  - ( ) Continuous Testing
+  - ( ) Continuous Deployment
+- **Layout anpassen**
+  - (X) Theme von W3C nutzen
+  - (X) Theme in Komponenten auslagern
+  - (X) Theme anpassen
+  - _( ) Mobile Menu basteln_
+  - ( ) Theme von W3C in Bootstrap umsetzen?
+- **Content hinzufügen**
+  - (X) Impressum hinzufügen
+  - (X) Datenschutz
+  - _( ) Kontaktformular hinzufügen_
+- **Backend implementieren**
+  - ( ) Grundlegendes
+  - ( ) Backend für den Mailversand
+  - ( ) Backend für `person`
+  - ( ) Backend für `projects`
+  - ( ) Backend für `services`
+- **Daten hinzufügen**
+  - _( ) Projekte_
+  - (X) Dienstleistungen
+  - (X) Person 
+  - (X) Skills
+- **Profile veröffentlichen**
+  - _( ) Auf Webseite bringen_
+  - ( ) Konfigurierbar machen (z.B. Skills)
+    - ( ) Skills
+    - ( ) Felder dynamisch

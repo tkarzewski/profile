@@ -13,8 +13,8 @@ export class Project {
     if (data) {
       this.title = data.title;
       this.subTitle = data.subTitle;
-      this.fromDate = new Date(data.fromDate);
-      this.toDate = new Date(data.toDate);
+      this.fromDate = data.fromDate ? new Date(data.fromDate) : null;
+      this.toDate = data.toDate ? new Date(data.toDate) : null;
       this.customer = data.customer;
       this.roles = data.roles;
       this.description = data.description;

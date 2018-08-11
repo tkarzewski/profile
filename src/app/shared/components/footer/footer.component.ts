@@ -16,9 +16,7 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.loadData();
-    }, 2000);
+    this.loadData();
   }
 
   private loadData() {

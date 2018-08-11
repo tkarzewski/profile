@@ -1,38 +1,32 @@
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;">
+<!-- The Grid -->
+<div class="w3-row-padding">
 
-  <!-- The Grid -->
-  <div class="w3-row-padding">
+  <!-- Left Column -->
+  <div class="w3-third">
+    <div class="w3-white w3-text-grey w3-card-4">
 
-    <!-- Left Column -->
-    <div class="w3-third">
-      <div class="w3-white w3-text-grey w3-card-4">
+      <!-- Personal Data -->
+      <tk-person></tk-person>
 
-        <!-- Personal Data -->
-        <tk-person></tk-person>
-
-        <!-- BEGIN SKILLS -->
-        <tk-skills></tk-skills>
-      </div>
-      <br>
-
+      <!-- BEGIN SKILLS -->
+      <tk-skills></tk-skills>
     </div>
-    <!-- End Left Column -->
-
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-      <!-- BEGIN SERVICES -->
-      <tk-services></tk-services>
-
-      <!-- BEGIN PROJECTS -->
-      <tk-projects></tk-projects>
-
-    </div>
-    <!-- End Right Column -->
+    <br>
 
   </div>
-  <!-- End Grid -->
+  <!-- End Left Column -->
+
+  <!-- Right Column -->
+  <div class="w3-twothird">
+
+    <!-- BEGIN SERVICES -->
+    <tk-services></tk-services>
+
+    <!-- BEGIN PROJECTS -->
+    <tk-projects></tk-projects>
+
+  </div>
+  <!-- End Right Column -->
 
 </div>
-<!-- End Page Container -->
+<!-- End Grid -->

@@ -1,77 +1,77 @@
 [
   {
-    "skill": "Angular",
+    "name": "Angular",
     "category": "Frontend",
     "experience": 9
   },
   {
-    "skill": "TypeScript",
+    "name": "TypeScript",
     "category": "Frontend",
     "experience": 8
   },
   {
-    "skill": "JavaScript",
+    "name": "JavaScript",
     "category": "Frontend",
     "experience": 9
   },
   {
-    "skill": "HTML",
+    "name": "HTML",
     "category": "Frontend",
     "experience": 9
   },
   {
-    "skill": "(S)CSS",
+    "name": "(S)CSS",
     "category": "Frontend",
     "experience": 6
   },
   {
-    "skill": "REST",
+    "name": "REST",
     "category": "Backend",
     "experience": 8
   },
   {
-    "skill": "Java",
+    "name": "Java",
     "category": "Backend",
     "experience": 6
   },
   {
-    "skill": "PHP",
+    "name": "PHP",
     "category": "Backend",
     "experience": 6
   },
   {
-    "skill": "DevOps (Continuous Build, Testing, Deployment)",
+    "name": "DevOps (Continuous Build, Testing, Deployment)",
     "category": "Drumherum",
     "experience": 6
   },
   {
-    "skill": "Google Analytics / Google Tag Manager",
-    "category": "Drumherum",
+    "name": "Google Analytics / Google Tag Manager",
+    "category": "Other",
     "experience": 7
   },
   {
-    "skill": "Scrum",
-    "category": "Drumherum",
+    "name": "Scrum",
+    "category": "Other",
     "experience": 8
   },
   {
-    "skill": "Softwareentwicklungsprozess",
-    "category": "Drumherum",
+    "name": "Softwareentwicklungsprozess",
+    "category": "Other",
     "experience": 5
   },
   {
-    "skill": "Clean Code",
-    "category": "Drumherum",
+    "name": "Clean Code",
+    "category": "Other",
     "experience": 7
   },
   {
-    "skill": "Deutsch",
-    "category": "Sprachen",
+    "name": "Deutsch",
+    "category": "Language",
     "experience": 10
   },
   {
-    "skill": "Englisch",
-    "category": "Sprachen",
+    "name": "Englisch",
+    "category": "Language",
     "experience": 7
   }
 ]

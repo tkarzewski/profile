@@ -9,13 +9,15 @@ import { AppComponent } from './app.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProfileModule } from './profile/profile.module';
 import { ImprintComponent } from './imprint/imprint.component';
+import { PrivacyComponent } from './privacy/privacy.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContactComponent,
-    ImprintComponent
+    ImprintComponent,
+    PrivacyComponent
   ],
   imports: [
     BrowserAnimationsModule,

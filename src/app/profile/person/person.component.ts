@@ -5,7 +5,7 @@ import { PersonService } from '../../shared/services/person/person.service';
 @Component({
   selector: 'tk-person',
   templateUrl: './person.component.html',
-  styleUrls: ['./person.component.css']
+  styleUrls: ['./person.component.scss']
 })
 export class PersonComponent implements OnInit {
 

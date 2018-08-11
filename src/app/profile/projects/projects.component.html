@@ -1,0 +1,23 @@
+<div class="w3-container w3-card w3-white">
+  <h2 class="w3-text-grey w3-padding-16">
+    <span class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-teal"></span>
+    Projekte <span class="w3-small">(Auszug)</span>
+  </h2>
+
+  <div *ngFor="let project of projects, let last=last" class="w3-container">
+    <h5 class="w3-opacity"><b>{{ project.roles | listValues }} &nbsp; | &nbsp; {{ project.customer }}</b></h5>
+    <h6 class="w3-text-teal">
+      <span class="fa fa-calendar fa-fw w3-margin-right"></span>
+      {{ project.fromDate | date:'MM/yyyy' }} - {{ project.toDate ? (project.toDate | date:'MM/yyyy') : 'heute' }}
+    </h6>
+    <p>
+      {{ project.description }}
+    </p>
+    <p class="w3-small w3-text-gray">
+      {{ project.keywords | listValues }}
+    </p>
+    <hr *ngIf="!last">
+    <br *ngIf="last">
+  </div>
+
+</div>

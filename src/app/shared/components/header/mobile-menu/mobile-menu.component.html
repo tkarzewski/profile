@@ -1,0 +1,15 @@
+<div class="w3-dropdown-click w3-right">
+  <span (click)="toggleMenu()" class="fa fa-2x fa-bars"></span>
+  <div [class.w3-show]="isMenuDisplayed" class="w3-dropdown-content w3-bar w3-border" style="right:0">
+    <a (click)="toggleMenu()" [routerLink]="['/']" href="javascript:" class="w3-bar-item w3-button w3-mobile">
+      Start
+    </a>
+    <a (click)="toggleMenu()" [routerLink]="['/impressum']" href="javascript:" class="w3-bar-item w3-button w3-mobile">
+      Impressum
+    </a>
+    <a (click)="toggleMenu()" [routerLink]="['/datenschutz']" href="javascript:" class="w3-bar-item w3-button w3-mobile">
+      Datenschutz
+    </a>
+  </div>
+</div>
+

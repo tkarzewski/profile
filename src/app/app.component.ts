@@ -7,10 +7,4 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  isButtonDisabled = false;
-
-  onClick(buttonNr: string) {
-    console.log('Button ' + buttonNr + ' clicked');
-  }
-
 }

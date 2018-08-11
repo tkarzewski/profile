@@ -4,7 +4,7 @@ import { ServicesService } from './shared/services/services.service';
 @Component({
   selector: 'tk-services',
   templateUrl: './services.component.html',
-  styleUrls: ['./services.component.css']
+  styleUrls: ['./services.component.scss']
 })
 export class ServicesComponent implements OnInit {
 
