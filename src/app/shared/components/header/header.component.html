@@ -3,7 +3,12 @@
     Tobias Karzewski
     <span class="w3-medium w3-hide-small">Selbstständiger Softwareentwickler</span>
   </h2>
-  <div class="w3-right w3-hide-medium w3-hide-large">
-    <tk-mobile-menu></tk-mobile-menu>
+  <div class="bar-container w3-right w3-hide-medium w3-hide-large">
+    <span (click)="toggleMenu()" class="fa fa-2x fa-bars"></span>
   </div>
 </header>
+
+<tk-mobile-menu
+  [isDisplayed]="isMenuDisplayed"
+  (menuToggled)="isMenuDisplayed = $event">
+</tk-mobile-menu>

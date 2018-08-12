@@ -1,0 +1,13 @@
+.w3-bar {
+  margin-top: 0;
+
+  >a {
+    border-top: 0.5px solid white;
+    font-size: larger;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+}

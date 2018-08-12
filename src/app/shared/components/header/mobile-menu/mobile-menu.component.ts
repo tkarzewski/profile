@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'tk-mobile-menu',
   templateUrl: './mobile-menu.component.html',
-  styleUrls: ['./mobile-menu.component.css']
+  styleUrls: ['./mobile-menu.component.scss']
 })
 export class MobileMenuComponent implements OnInit {
 
-  isMenuDisplayed = false;
+  @Input() isDisplayed = false;
+  @Output() menuToggled: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   constructor() { }
 
@@ -15,7 +16,8 @@ export class MobileMenuComponent implements OnInit {
   }
 
   toggleMenu() {
-    this.isMenuDisplayed = !this.isMenuDisplayed;
+    this.isDisplayed = !this.isDisplayed;
+    this.menuToggled.emit(this.isDisplayed);
   }
 
 }
