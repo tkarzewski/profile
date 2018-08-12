@@ -18,7 +18,7 @@ TODOs fürs Profile
   - (X) Theme von W3C nutzen
   - (X) Theme in Komponenten auslagern
   - (X) Theme anpassen
-  - _( ) Mobile Menu basteln_
+  - (X) Mobile Menu basteln
   - ( ) Theme von W3C in Bootstrap umsetzen?
 - **Content hinzufügen**
   - (X) Impressum hinzufügen

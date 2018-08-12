@@ -1,21 +1,43 @@
 <div [class.w3-hide]="!isDisplayed"
      class="w3-bar w3-teal">
-  <a (click)="toggleMenu()"
-     [routerLink]="['/']"
+
+  <a (click)="jumpTo('person')"
      href="javascript:"
      class="w3-bar-item w3-button w3-mobile">
     Person
   </a>
-  <a href="#" class="w3-bar-item w3-button w3-mobile">Skills</a>
-  <a href="#" class="w3-bar-item w3-button w3-mobile">Auf einen Blick</a>
-  <a href="#" class="w3-bar-item w3-button w3-mobile">Projekte</a>
-  <a href="#" class="w3-bar-item w3-button w3-mobile">Download PDF</a>
+
+  <a (click)="jumpTo('skills')"
+     href="javascript:"
+     class="w3-bar-item w3-button w3-mobile">
+    Skills
+  </a>
+
+  <a (click)="jumpTo('auf-einen-blick')"
+     href="javascript:"
+     class="w3-bar-item w3-button w3-mobile">
+    Auf einen Blick
+  </a>
+
+  <a (click)="jumpTo('projekte')"
+     href="javascript:"
+     class="w3-bar-item w3-button w3-mobile">
+    Projekte
+  </a>
+
+  <a (click)="downloadPdf()"
+     href="javascript:"
+     class="w3-bar-item w3-button w3-mobile">
+    Download PDF
+  </a>
+
   <a (click)="toggleMenu()"
      [routerLink]="['/impressum']"
      href="javascript:"
      class="w3-bar-item w3-button w3-mobile">
     Impressum
   </a>
+
   <a (click)="toggleMenu()"
      [routerLink]="['/datenschutz']"
      href="javascript:"
