@@ -14,6 +14,9 @@ TODOs fürs Profile
   - ( ) Continuous Build
   - ( ) Continuous Testing
   - ( ) Continuous Deployment
+- **Testing**
+  - ( ) UnitTests
+  - ( ) E2E-Tests 
 - **Layout anpassen**
   - (X) Theme von W3C nutzen
   - (X) Theme in Komponenten auslagern

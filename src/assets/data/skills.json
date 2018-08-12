@@ -25,6 +25,11 @@
     "experience": 6
   },
   {
+    "name": "Bootstrap",
+    "category": "Frontend",
+    "experience": 6
+  },
+  {
     "name": "REST",
     "category": "Backend",
     "experience": 8
