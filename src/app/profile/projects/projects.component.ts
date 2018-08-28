@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Project } from './shared/models/project.model';
-import { ProjectService } from './shared/services/project.service';
+import { Project } from './models/project.model';
+import { ProjectService } from './services/project.service';
 
 @Component({
   selector: 'tk-projects',

@@ -24,8 +24,8 @@
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/font-awesome/css/font-awesome.css",
               "src/assets/css/w3.css",
-              "src/styles.css"
-            ],
+              "src/styles.scss",
+              "src/profileTheme.scss"            ],
             "scripts": []
           },
           "configurations": {
@@ -76,7 +76,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/font-awesome/css/font-awesome.css",
-              "src/styles.css"
+              "src/styles.scss",
+              "src/profileTheme.scss"
             ],
             "assets": [
               "src/assets",

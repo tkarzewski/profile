@@ -1,7 +1,29 @@
-.bar-container {
-  margin: 12px 0;
+h2 {
+  cursor: pointer;
+  border: none;
 
-  >span {
-    cursor: pointer;
+  .bar-container {
+    margin: 12px 0;
+
+    >span {
+      cursor: pointer;
+    }
   }
+}
+
+.link-container {
+
+  margin: 24px 0 0 0;
+
+  a {
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
 }

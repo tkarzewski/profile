@@ -1,9 +1,10 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
-import { Project } from '../models/project.model';
 import { map } from 'rxjs/internal/operators';
 import { Observable } from 'rxjs/index';
+
+import { Project } from '../models/project.model';
 
 @Injectable()
 export class ProjectService {

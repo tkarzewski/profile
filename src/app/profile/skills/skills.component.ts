@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { SkillsService } from './shared/services/skills.service';
-import { Skill } from './shared/models/skill.model';
-import { SkillCategory } from './shared/models/skill-category.enum';
+import { SkillsService } from './services/skills.service';
+import { Skill } from './models/skill.model';
+import { SkillCategory } from './models/skill-category.enum';
 
 @Component({
   selector: 'tk-skills',
