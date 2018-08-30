@@ -23,7 +23,7 @@ export class PersonService {
 
   loadData() {
     this.loadingStarted = true;
-    this.httpClient.get<Person>('/assets/data/person.json')
+    this.httpClient.get<Person>('/person')
       .subscribe(
         response => this.data.next(new Person(response)),
         error => {

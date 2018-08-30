@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  urlApi: 'http://localhost:80800,',
+  useMockData: false
 };

@@ -15,7 +15,7 @@ export class SkillsService {
 
   getSkills(): Observable<Array<Skill>> {
     if (!this.skillsObservable) {
-      this.skillsObservable = this.httpClient.get<Array<Skill>>('/assets/data/skills.json').pipe(
+      this.skillsObservable = this.httpClient.get<Array<Skill>>('/skills').pipe(
         map(response => response.map(skill => new Skill(skill))),
         share()
       );

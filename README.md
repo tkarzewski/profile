@@ -9,7 +9,6 @@ TODOs fürs Profile
 - **Grundlegendes**
   - (X) Update auf Angular 7beta
   - (X) Caching in die Services und aus dem Interceptor
-  - ( ) Barrierefreiheit umsetzen
 - **Infrastruktur**
   - ( ) Continuous Build
   - ( ) Continuous Testing
@@ -28,11 +27,13 @@ TODOs fürs Profile
   - (X) Datenschutz
   - _( ) Kontaktformular hinzufügen_
 - **Backend implementieren**
-  - ( ) Grundlegendes
-  - ( ) Backend für den Mailversand
-  - ( ) Backend für `person`
-  - ( ) Backend für `projects`
-  - ( ) Backend für `services`
+  - (x) Grundlegendes
+  - (x) Backend mit Mockdaten
+  - _( ) Backend für den Mailversand_
+  - ( ) Backend für DB `person`
+  - ( ) Backend für DB `projects`
+  - ( ) Backend für DB `skills`
+  - ( ) Backend für DB `services`
 - **Daten hinzufügen**
   - _( ) Projekte_
   - (X) Dienstleistungen
@@ -43,6 +44,11 @@ TODOs fürs Profile
   - ( ) Konfigurierbar machen (z.B. Skills)
     - ( ) Skills
     - ( ) Felder dynamisch
+- **Nice to have**
+  - ( ) Barrierefreiheit umsetzen
+  - ( ) Outputs Konfigurierbar
+  - ( ) Routen Konfigurierbar
+  - ( ) i18n umsetzen
 
 ## Requirements
 - NPM
@@ -59,11 +65,13 @@ TODOs fürs Profile
 * Apigility https://apigility.org/documentation/intro/installation
 * https://apigility.org/documentation/intro/first-rest-service
 * Composer install
+* `composer development-enable`
 
 ## Start
 ```
 cd api
-php -S 0.0.0.0:8080 -ddisplay_errors=0 -t public index.php
+php -S 0.0.0.0:8080 -ddisplay_errors=1 -t public index.php
+php -S 0.0.0.0:8080 -ddisplay_errors=1 -t public public/index.php
 ```
 #### Configure REST-API
 Start the Apigility Builder at http://localhost:8080/apigility/ui#/
