@@ -35,6 +35,6 @@ class PersonController extends AbstractActionController
 
     public function personAction()
     {
-        return new ViewModel([json_decode($this->data)]);
+        return new ViewModel(json_decode($this->data, true));
     }
 }

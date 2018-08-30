@@ -93,6 +93,6 @@ class SkillsController extends AbstractActionController
 
   public function skillsAction()
   {
-    return new ViewModel([json_decode($this->data)]);
+      return new ViewModel(json_decode($this->data, true));
   }
 }

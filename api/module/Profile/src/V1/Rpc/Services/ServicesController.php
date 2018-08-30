@@ -16,6 +16,6 @@ class ServicesController extends AbstractActionController
 
   public function servicesAction()
   {
-    return new ViewModel(json_decode($this->data));
+      return new ViewModel(json_decode($this->data, true));
   }
 }
