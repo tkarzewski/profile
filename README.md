@@ -43,3 +43,29 @@ TODOs fürs Profile
   - ( ) Konfigurierbar machen (z.B. Skills)
     - ( ) Skills
     - ( ) Felder dynamisch
+
+## Requirements
+- NPM
+- NodeJS
+- Angular
+- Angular CLI
+- Composer
+- PHP
+
+### Frontend
+
+### Backend
+#### Install
+* Apigility https://apigility.org/documentation/intro/installation
+* https://apigility.org/documentation/intro/first-rest-service
+* Composer install
+
+## Start
+```
+cd api
+php -S 0.0.0.0:8080 -ddisplay_errors=0 -t public index.php
+```
+#### Configure REST-API
+Start the Apigility Builder at http://localhost:8080/apigility/ui#/
+
+
