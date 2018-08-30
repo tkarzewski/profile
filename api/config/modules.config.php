@@ -24,6 +24,8 @@ return [
     'ZF\\Rest',
     'ZF\\Rpc',
     'ZF\\Versioning',
+    'ZfrCors',
     'Application',
     21 => 'Profile',
+    'Status',
 ];
