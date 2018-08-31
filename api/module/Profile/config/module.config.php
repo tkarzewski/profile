@@ -114,16 +114,7 @@ return [
     ],
     'input_filter_specs' => [
         'Profile\\V1\\Rest\\Person\\Validator' => [],
-        'Profile\\V1\\Rpc\\Person\\Validator' => [
-            0 => [
-                'required' => false,
-                'validators' => [],
-                'filters' => [],
-                'name' => 'name',
-                'description' => 'Name of the Person',
-                'field_type' => 'string',
-            ],
-        ],
+        'Profile\\V1\\Rpc\\Person\\Validator' => [],
     ],
     'controllers' => [
         'factories' => [

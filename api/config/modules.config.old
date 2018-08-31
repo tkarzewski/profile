@@ -25,6 +25,5 @@ return [
     'ZF\\Rpc',
     'ZF\\Versioning',
     'Application',
-    'Status',
-    'Profile',
+    21 => 'Profile',
 ];

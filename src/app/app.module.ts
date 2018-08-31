@@ -1,6 +1,6 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,6 +13,7 @@ import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactService } from './contact/services/contact.service';
 import { FormsModule } from '@angular/forms';
+import { ApiInterceptor } from './shared/interceptors/api.interceptor';
 
 
 @NgModule({
@@ -33,7 +34,12 @@ import { FormsModule } from '@angular/forms';
   ],
   providers: [
     HttpClient,
-    ContactService
+    ContactService,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent]
 })

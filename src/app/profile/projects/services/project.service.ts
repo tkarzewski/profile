@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 import { map } from 'rxjs/internal/operators';
-import { Observable } from 'rxjs/index';
+import { Observable } from 'rxjs';
 
 import { Project } from '../models/project.model';
 
@@ -13,7 +13,7 @@ export class ProjectService {
   }
 
   getProjects(): Observable<Array<Project>> {
-    return this.httpClient.get<Array<Project>>('/assets/data/projects.json').pipe(
+    return this.httpClient.get<Array<Project>>('/projects').pipe(
       map(response => response.map(project => new Project(project)))
     );
   }

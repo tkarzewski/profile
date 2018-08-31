@@ -9,6 +9,6 @@ export class ServicesService {
   }
 
   getServices(): Observable<Array<string>> {
-    return this.httpClient.get<Array<string>>('/assets/data/services.json');
+    return this.httpClient.get<Array<string>>('/services');
   }
 }
