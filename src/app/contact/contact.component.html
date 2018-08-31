@@ -2,7 +2,8 @@
 
   <div class="w3-container w3-card-4 w3-white w3-text-grey w3-margin">
 
-    <div class="w3-row">
+    <!-- Display Contact Form -->
+    <div *ngIf="!isError && !isSuccess" class="w3-row">
       <div class="w3-col l2">&nbsp;</div>
       <div class="w3-col l8">
         <ng-container *ngTemplateOutlet="templateContactForm"></ng-container>
@@ -10,15 +11,19 @@
       <div class="w3-col l2">&nbsp;</div>
     </div>
 
-<<<<<<< HEAD
-    <!--
-    <pre>{{ contactForm|json }}</pre>
-    -->
+    <!-- Display Success or Error -->
+    <div *ngIf="isError || isSuccess" class="w3-row">
+      <div class="w3-col l2">&nbsp;</div>
+      <div *ngIf="isSuccess" class="w3-col l8">
+        <ng-container *ngTemplateOutlet="templateSuccess"></ng-container>
+      </div>
+      <div *ngIf="isError" class="w3-col l8">
+        <ng-container *ngTemplateOutlet="templateError"></ng-container>
+      </div>
+      <div class="w3-col l2">&nbsp;</div>
+    </div>
 
-  </form>
-=======
   </div>
->>>>>>> 218bd257b19cb9a716712e8d5c3995416823137c
 
 </div>
 
@@ -30,23 +35,7 @@
     <h2 class="w3-center w3-margin-top">Kontakt aufnehmen</h2>
 
     <div class="w3-row w3-section">
-      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-      <div class="w3-rest">
-        <mat-form-field appearance="fill">
-          <mat-label>Name</mat-label>
-          <input matInput
-                 [(ngModel)]="request.name"
-                 #name="ngModel"
-                 required
-                 name="name"
-                 id="name"
-                 type="text">
-        </mat-form-field>
-      </div>
-    </div>
-
-    <div class="w3-row w3-section">
-      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-at"></i></div>
       <div class="w3-rest">
         <mat-form-field appearance="fill">
           <mat-label>Email</mat-label>
@@ -59,7 +48,7 @@
                  id="email"
                  type="email">
           <mat-error *ngIf="email?.errors?.pattern && !email?.errors?.required">
-            Bitte eine gültige E-Mail Adresse eingeben
+            Bitte geben Sie eine gültige E-Mail Adresse ein
           </mat-error>
         </mat-form-field>
       </div>
@@ -81,7 +70,23 @@
     </div>
 
     <div class="w3-row w3-section">
-      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-comment"></i></div>
+      <div class="w3-rest">
+        <mat-form-field appearance="fill">
+          <mat-label>Betreff</mat-label>
+          <input matInput
+                 [(ngModel)]="request.subject"
+                 #subject="ngModel"
+                 required
+                 name="subject"
+                 id="subject"
+                 type="text">
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-comments"></i></div>
       <div class="w3-rest">
         <mat-form-field appearance="fill">
           <mat-label>Nachricht</mat-label>
@@ -101,14 +106,6 @@
       </div>
     </div>
 
-<<<<<<< HEAD
-  <p class="w3-right">
-    <button class="w3-button w3-section w3-teal w3-ripple"
-            (click)="sendRequest()">
-      Absenden
-    </button>
-  </p>
-=======
     <p class="w3-right">
       <button [disabled]="contactForm.invalid"
               (click)="sendRequest()"
@@ -118,7 +115,33 @@
     </p>
 
   </form>
->>>>>>> 218bd257b19cb9a716712e8d5c3995416823137c
 
 </ng-template>
 <!-- END Template Contact Form -->
+
+
+<!-- TODO Funny Response -->
+<!-- TODO Mail aus Person -->
+<ng-template #templateSuccess>
+  <div class="w3-panel w3-pale-green w3-card-4 w3-roundw 3-margin-top">
+    <h2 class="w3-center w3-margin-top">Vielen Dank für Ihre Nachricht</h2>
+    <p>
+      Ich werde sie schnellstmöglich beantworten.<br>
+      Eine Kopier Ihrer Nachricht wurde Ihnen per E-Mail gesendet.
+    </p>
+    <a class="w3-right w3-margin-bottom" href="/">Zur Übersicht</a>
+  </div>
+</ng-template>
+
+
+<!-- TODO Mail aus Person -->
+<ng-template #templateError>
+  <div class="w3-panel w3-pale-red w3-card-4 w3-round w3-margin-top">
+    <h2 class="w3-center w3-margin-top">Hoppala!</h2>
+    <p>
+      Da ist etwas schief gegangen. Bitte versuchen Sie es später noch einmal oder kontaktieren Sie mich per
+      <a href="mailto:tobias@karzewski.de">E-Mail</a>.
+    </p>
+    <a class="w3-right w3-margin-bottom" href="/">Zur Übersicht</a>
+  </div>
+</ng-template>

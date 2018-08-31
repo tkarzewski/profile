@@ -11,13 +11,18 @@ export class ApiInterceptor implements HttpInterceptor {
     const apiUrl = environment.urlApi;
     let apiEndpoint = apiUrl + req.url;
 
-    if (environment.useMockData) {
+    // If an PHP-Script is called use the origin url
+    if (req.url.indexOf('.php') !== -1) {
+
+      return next.handle(req);
+    } else if (environment.useMockData) {
+
+      // If mockdata should be used
       const mockUrl = 'assets/data/';
       apiEndpoint = mockUrl + req.url + '.json';
     }
 
     const configuredUrlRequest = req.clone({url: apiEndpoint});
-
     return next.handle(configuredUrlRequest);
   }
 }

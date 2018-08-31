@@ -5,7 +5,6 @@ TODO Doc
 ## TODOs
 
 - Kontakt
-  - FE Validierungen
   - BA kleines contact.php
 - Snippets
 - Readme überarbeiten
@@ -35,6 +34,7 @@ TODO Doc
   - (X) Theme in Komponenten auslagern
   - (X) Theme anpassen
   - (X) Mobile Menu basteln
+  - ( ) Icons überdenken
   - ( ) Theme von W3C in Bootstrap umsetzen?
 - **Content hinzufügen**
   - (X) Impressum hinzufügen
