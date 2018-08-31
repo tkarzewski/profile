@@ -10,6 +10,7 @@ export class ContactService {
   }
 
   sendRequest(request: ContactRequest): Observable<boolean> {
-    return this.httpClient.post<boolean>('/contact', request);
+    const url = 'assets/php/contact-workaround.php';
+    return this.httpClient.post<boolean>(url, request);
   }
 }

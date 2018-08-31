@@ -4,7 +4,21 @@ TODO Doc
 
 ## TODOs
 
-TODOs fürs Profile
+- Kontakt
+  - FE Validierungen
+  - BA kleines contact.php
+- Snippets
+- Readme überarbeiten
+  - Apigility Config auf TODO
+  - GitHub Projekt mit Issues aus TODOs machen
+- Versionierung
+  - in GitHub
+  - versions.ts und im Footer/Konsole
+- Release
+- Publish on Github
+
+
+### TODOs fürs Profile
 
 - **Grundlegendes**
   - (X) Update auf Angular 7beta
