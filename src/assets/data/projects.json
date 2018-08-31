@@ -4,7 +4,7 @@
     "fromDate": "2017-06-16",
     "customer": "Barmenia Versicherungen",
     "roles": ["Architektur", "Entwicklung", "Testing", "DevOps"],
-    "description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam",
+    "description": "Architektur und Entwicklung des neuen Kundenportals 'Meine Barmenia' für Versicherte der Barmenia. Inklusive Routing, Anbindung ans Backend, FE-Entwicklung und Tests mit Mockdaten, Entwicklung einer Komponenten Bibliothek basierend auf Angular Material (inkl Validierung) samt Versionierung in Artifactory Repo. Mobile Optimierung der WebApp für eine HybridApp. DevOp-Tätigkeiten für Continuous Build und Deployment des Frontends auf verschiedenen Umgebungen.",
     "keywords": ["Angular", "TypeScript", "REST-API", "JSON", "Jade/Pug", "CSS", "SASS", "Gulp", "NPM", "GitLab", "Continuous Integration", "Karma", "Jasmine", "Protractor", "PhpStorm", "Scrum"]
   },
   {
