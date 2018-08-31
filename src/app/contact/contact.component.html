@@ -1,6 +1,6 @@
 <div class="w3-content w3-margin-top" style="max-width:1400px;">
 
-  <form #contactForm="ngForm" class="w3-container w3-card-4 w3-white w3-text-grey w3-margin">
+  <div class="w3-container w3-card-4 w3-white w3-text-grey w3-margin">
 
     <div class="w3-row">
       <div class="w3-col l2">&nbsp;</div>
@@ -10,82 +10,98 @@
       <div class="w3-col l2">&nbsp;</div>
     </div>
 
-    <pre>{{ contactForm|json }}</pre>
-
-  </form>
+  </div>
 
 </div>
 
 <!-- START Template Contact Form -->
 <ng-template #templateContactForm>
 
-  <h2 class="w3-center w3-margin-top">Kontakt aufnehmen</h2>
+  <form name="contactFormName" #contactForm="ngForm">
 
-  <div class="w3-row w3-section">
-    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
-    <div class="w3-rest">
-      <mat-form-field appearance="fill">
-        <mat-label>Name</mat-label>
-        <input matInput
-               required
-               [(ngModel)]="request.name"
-               id="name"
-               name="name"
-               type="text">
-      </mat-form-field>
+    <h2 class="w3-center w3-margin-top">Kontakt aufnehmen</h2>
+
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-user"></i></div>
+      <div class="w3-rest">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput
+                 [(ngModel)]="request.name"
+                 #name="ngModel"
+                 required
+                 name="name"
+                 id="name"
+                 type="text">
+        </mat-form-field>
+      </div>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
-    <div class="w3-rest">
-      <mat-form-field appearance="fill">
-        <mat-label>Email</mat-label>
-        <input matInput
-               required
-               [(ngModel)]="request.email"
-               id="email"
-               name="email"
-               type="email">
-      </mat-form-field>
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-envelope-o"></i></div>
+      <div class="w3-rest">
+        <mat-form-field appearance="fill">
+          <mat-label>Email</mat-label>
+          <input matInput
+                 [(ngModel)]="request.email"
+                 #email="ngModel"
+                 required
+                 [pattern]="emailValidationPattern"
+                 name="email"
+                 id="email"
+                 type="email">
+          <mat-error *ngIf="email?.errors?.pattern && !email?.errors?.required">
+            Bitte eine gültige E-Mail Adresse eingeben
+          </mat-error>
+        </mat-form-field>
+      </div>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
-    <div class="w3-rest">
-      <mat-form-field appearance="fill">
-        <mat-label>Telefon</mat-label>
-        <input matInput
-               [(ngModel)]="request.phone"
-               id="phone"
-               name="phone"
-               type="text">
-      </mat-form-field>
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-phone"></i></div>
+      <div class="w3-rest">
+        <mat-form-field appearance="fill">
+          <mat-label>Telefon</mat-label>
+          <input matInput
+                 [(ngModel)]="request.phone"
+                 id="phone"
+                 name="phone"
+                 #phone="ngModel"
+                 type="text">
+        </mat-form-field>
+      </div>
     </div>
-  </div>
 
-  <div class="w3-row w3-section">
-    <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
-    <div class="w3-rest">
-      <mat-form-field appearance="fill">
-        <mat-label>Nachricht</mat-label>
-        <textarea matInput
-                  required
-                  [(ngModel)]="request.message"
-                  id="message"
-                  name="message"
-                  type="text">
-        </textarea>
-      </mat-form-field>
+    <div class="w3-row w3-section">
+      <div class="w3-col" style="width:50px"><i class="w3-xxlarge fa fa-pencil"></i></div>
+      <div class="w3-rest">
+        <mat-form-field appearance="fill">
+          <mat-label>Nachricht</mat-label>
+          <textarea matInput
+                    required
+                    [(ngModel)]="request.message"
+                    minlength="100"
+                    id="message"
+                    #message="ngModel"
+                    name="message"
+                    type="text">
+          </textarea>
+          <mat-error *ngIf="message?.errors?.minlength && !message?.errors?.required">
+            Bitte schreiben Sie doch eine längere Nachricht (z.B. mit mindestens 100 Zeichen)
+          </mat-error>
+        </mat-form-field>
+      </div>
     </div>
-  </div>
 
-  <p class="w3-right">
-    <button class="w3-button w3-section w3-teal w3-ripple">
-      Absenden
-    </button>
-  </p>
+    <p class="w3-right">
+      <button [disabled]="contactForm.invalid"
+              (click)="sendRequest()"
+              class="w3-button w3-section w3-teal w3-ripple">
+        Absenden
+      </button>
+    </p>
+
+  </form>
 
 </ng-template>
 <!-- END Template Contact Form -->
