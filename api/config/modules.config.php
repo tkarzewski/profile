@@ -26,6 +26,5 @@ return [
     'ZF\\Versioning',
     'ZfrCors',
     'Application',
-    21 => 'Profile',
-    'Status',
+    'Profile',
 ];

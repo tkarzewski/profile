@@ -10,7 +10,9 @@
       <div class="w3-col l2">&nbsp;</div>
     </div>
 
+    <!--
     <pre>{{ contactForm|json }}</pre>
+    -->
 
   </form>
 
@@ -82,7 +84,8 @@
   </div>
 
   <p class="w3-right">
-    <button class="w3-button w3-section w3-teal w3-ripple">
+    <button class="w3-button w3-section w3-teal w3-ripple"
+            (click)="sendRequest()">
       Absenden
     </button>
   </p>

@@ -10,7 +10,6 @@ export class ContactService {
   }
 
   sendRequest(request: ContactRequest): Observable<boolean> {
-    const url = 'tbd';
-    return this.httpClient.post<boolean>(url, request);
+    return this.httpClient.post<boolean>('/contact', request);
   }
 }

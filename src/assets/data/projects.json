@@ -4,8 +4,8 @@
     "fromDate": "2017-06-16",
     "customer": "Barmenia Versicherungen",
     "roles": ["Architektur", "Entwicklung", "Testing", "DevOps"],
-    "description": "Architektur und Entwicklung des neuen Kundenportals 'Meine Barmenia' für Versicherte der Barmenia. Inklusive Routing, Anbindung ans Backend, FE-Entwicklung und Tests mit Mockdaten, Entwicklung einer Komponenten Bibliothek basierend auf Angular Material (inkl Validierung) samt Versionierung in Artifactory Repo. Mobile Optimierung der WebApp für eine HybridApp. DevOp-Tätigkeiten für Continuous Build und Deployment des Frontends auf verschiedenen Umgebungen.",
-    "keywords": ["Angular", "TypeScript", "REST-API", "JSON", "Jade/Pug", "CSS", "SASS", "Gulp", "NPM", "GitLab", "Continuous Integration", "Karma", "Jasmine", "Protractor", "PhpStorm", "Scrum"]
+    "description": "Architektur und Entwicklung des neuen Kundenportals 'Meine Barmenia' für Versicherte. Routing, Anbindung ans Backend, FE-Entwicklung und Tests mit Mockdaten, Entwicklung einer Komponentenbibliothek. Mobile Optimierung der WebApp für eine HybridApp. Integration Google Analytics / Google Tag Manager. DevOp-Tätigkeiten für Continuous Build und Deployment des Frontends auf verschiedenen Umgebungen. Unterstützung bei der Einführung von Scrum",
+    "keywords": ["Angular 6", "Angular Lib", "TypeScript", "Protractor", "REST-API", "HTML", "SASS/SCSS", "Bootstrap", "GitLab", "Continuous Integration", "Jenkins", "Google Analytics / Tag Manager", "Scrum"]
   },
   {
     "title": "Relaunch ElectronicPartner B2B Plattform- & shop",

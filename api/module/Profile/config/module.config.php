@@ -45,6 +45,16 @@ return [
                     ],
                 ],
             ],
+            'profile.rpc.contact' => [
+                'type' => 'Segment',
+                'options' => [
+                    'route' => '/contact',
+                    'defaults' => [
+                        'controller' => 'Profile\\V1\\Rpc\\Contact\\Controller',
+                        'action' => 'contact',
+                    ],
+                ],
+            ],
         ],
     ],
     'zf-versioning' => [
@@ -53,6 +63,7 @@ return [
             1 => 'profile.rpc.projects',
             2 => 'profile.rpc.skills',
             3 => 'profile.rpc.services',
+            4 => 'profile.rpc.contact',
         ],
     ],
     'zf-rest' => [],
@@ -62,6 +73,7 @@ return [
             'Profile\\V1\\Rpc\\Projects\\Controller' => 'Json',
             'Profile\\V1\\Rpc\\Skills\\Controller' => 'Json',
             'Profile\\V1\\Rpc\\Services\\Controller' => 'Json',
+            'Profile\\V1\\Rpc\\Contact\\Controller' => 'Json',
         ],
         'accept_whitelist' => [
             'Profile\\V1\\Rpc\\Person\\Controller' => [
@@ -84,6 +96,12 @@ return [
                 1 => 'application/json',
                 2 => 'application/*+json',
             ],
+            'Profile\\V1\\Rpc\\Contact\\Controller' => [
+                0 => 'application/vnd.profile.v1+json',
+                1 => 'application/json',
+                2 => 'application/*+json',
+                3 => 'text/html',
+            ],
         ],
         'content_type_whitelist' => [
             'Profile\\V1\\Rpc\\Person\\Controller' => [
@@ -102,6 +120,11 @@ return [
                 0 => 'application/vnd.profile.v1+json',
                 1 => 'application/json',
             ],
+            'Profile\\V1\\Rpc\\Contact\\Controller' => [
+                0 => 'application/vnd.profile.v1+json',
+                1 => 'application/json',
+                2 => 'text/html',
+            ],
         ],
     ],
     'zf-hal' => [
@@ -111,10 +134,45 @@ return [
         'Profile\\V1\\Rpc\\Person\\Controller' => [
             'input_filter' => 'Profile\\V1\\Rpc\\Person\\Validator',
         ],
+        'Profile\\V1\\Rpc\\Contact\\Controller' => [
+            'input_filter' => 'Profile\\V1\\Rpc\\Contact\\Validator',
+        ],
     ],
     'input_filter_specs' => [
         'Profile\\V1\\Rest\\Person\\Validator' => [],
         'Profile\\V1\\Rpc\\Person\\Validator' => [],
+        'Profile\\V1\\Rpc\\Contact\\Validator' => [
+            0 => [
+                'required' => true,
+                'validators' => [],
+                'filters' => [],
+                'name' => 'name',
+                'description' => 'Name of the Requester',
+            ],
+            1 => [
+                'required' => true,
+                'validators' => [],
+                'filters' => [],
+                'name' => 'email',
+                'description' => 'Email of the Requester',
+            ],
+            2 => [
+                'required' => false,
+                'validators' => [],
+                'filters' => [],
+                'name' => 'phone',
+                'description' => 'Phone of the Requester',
+                'allow_empty' => true,
+                'continue_if_empty' => true,
+            ],
+            3 => [
+                'required' => true,
+                'validators' => [],
+                'filters' => [],
+                'name' => 'message',
+                'description' => 'Message of the Requester',
+            ],
+        ],
     ],
     'controllers' => [
         'factories' => [
@@ -122,6 +180,7 @@ return [
             'Profile\\V1\\Rpc\\Projects\\Controller' => \Profile\V1\Rpc\Projects\ProjectsControllerFactory::class,
             'Profile\\V1\\Rpc\\Skills\\Controller' => \Profile\V1\Rpc\Skills\SkillsControllerFactory::class,
             'Profile\\V1\\Rpc\\Services\\Controller' => \Profile\V1\Rpc\Services\ServicesControllerFactory::class,
+            'Profile\\V1\\Rpc\\Contact\\Controller' => \Profile\V1\Rpc\Contact\ContactControllerFactory::class,
         ],
     ],
     'zf-rpc' => [
@@ -152,6 +211,17 @@ return [
                 0 => 'GET',
             ],
             'route_name' => 'profile.rpc.services',
+        ],
+        'Profile\\V1\\Rpc\\Contact\\Controller' => [
+            'service_name' => 'Contact',
+            'http_methods' => [
+                0 => 'POST',
+                1 => 'GET',
+                2 => 'PUT',
+                3 => 'PATCH',
+                4 => 'DELETE',
+            ],
+            'route_name' => 'profile.rpc.contact',
         ],
     ],
 ];
