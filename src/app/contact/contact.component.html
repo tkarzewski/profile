@@ -4,28 +4,29 @@
 
     <!-- Display Contact Form -->
     <div *ngIf="!isError && !isSuccess" class="w3-row">
-      <div class="w3-col l2">&nbsp;</div>
-      <div class="w3-col l8">
+      <div class="w3-col l2 m1">&nbsp;</div>
+      <div class="w3-col l8 m10">
         <ng-container *ngTemplateOutlet="templateContactForm"></ng-container>
       </div>
-      <div class="w3-col l2">&nbsp;</div>
+      <div class="w3-col l2 m1">&nbsp;</div>
     </div>
 
     <!-- Display Success or Error -->
     <div *ngIf="isError || isSuccess" class="w3-row">
-      <div class="w3-col l2">&nbsp;</div>
+      <div class="w3-col l2 m1">&nbsp;</div>
       <div *ngIf="isSuccess" class="w3-col l8">
         <ng-container *ngTemplateOutlet="templateSuccess"></ng-container>
       </div>
       <div *ngIf="isError" class="w3-col l8">
         <ng-container *ngTemplateOutlet="templateError"></ng-container>
       </div>
-      <div class="w3-col l2">&nbsp;</div>
+      <div class="w3-col l2 m1">&nbsp;</div>
     </div>
 
   </div>
 
 </div>
+
 
 <!-- START Template Contact Form -->
 <ng-template #templateContactForm>
@@ -120,28 +121,39 @@
 <!-- END Template Contact Form -->
 
 
-<!-- TODO Funny Response -->
-<!-- TODO Mail aus Person -->
+<!-- START Template Success Message -->
 <ng-template #templateSuccess>
-  <div class="w3-panel w3-pale-green w3-card-4 w3-roundw 3-margin-top">
-    <h2 class="w3-center w3-margin-top">Vielen Dank für Ihre Nachricht</h2>
-    <p>
-      Ich werde sie schnellstmöglich beantworten.<br>
-      Eine Kopier Ihrer Nachricht wurde Ihnen per E-Mail gesendet.
+  <div class="w3-panel w3-pale-green w3-card-4 w3-round w3-margin-top">
+    <h2 class="w3-center w3-margin-top"><span class="fa fa-bicycle"></span> Ihre Nachricht wird ausgeliefert!</h2>
+    <p class="w3-center w3-margin-top">
+      Sobald der Bote eintrifft, werde ich Ihre Nachricht beantworten.<br>
+      Eine Abschrift Ihrer Nachricht wird auch in Ihr Postfach geliefert.
     </p>
-    <a class="w3-right w3-margin-bottom" href="/">Zur Übersicht</a>
+    <p class="w3-center w3-margin-bottom">
+      <a class="w3-margin-bottom" [routerLink]="['/']">
+        Zur Übersicht <span class="fa fa-angle-right"></span>
+      </a>
+    </p>
   </div>
 </ng-template>
+<!-- END Template Success Message -->
 
 
-<!-- TODO Mail aus Person -->
+<!-- START Template Error Message -->
 <ng-template #templateError>
   <div class="w3-panel w3-pale-red w3-card-4 w3-round w3-margin-top">
-    <h2 class="w3-center w3-margin-top">Hoppala!</h2>
-    <p>
-      Da ist etwas schief gegangen. Bitte versuchen Sie es später noch einmal oder kontaktieren Sie mich per
-      <a href="mailto:tobias@karzewski.de">E-Mail</a>.
+    <h2 class="w3-center w3-margin-top"><span class="far fa-sad-tear"></span> Hoppala!</h2>
+    <p class="w3-center w3-margin-top">
+      Ein - na was wohl - unerwarteter Fehler ist aufgetreten.
+      <br>
+      Bitte versuchen Sie es später noch einmal oder kontaktieren Sie mich per
+      <a [href]="'mailto:' + person.contact.mail">E-Mail</a>.
     </p>
-    <a class="w3-right w3-margin-bottom" href="/">Zur Übersicht</a>
+    <p class="w3-center w3-margin-bottom">
+      <a class="w3-margin-bottom" [routerLink]="['/']">
+        Zur Übersicht <span class="fa fa-angle-right"></span>
+      </a>
+    </p>
   </div>
 </ng-template>
+<!-- END Template Error Message -->

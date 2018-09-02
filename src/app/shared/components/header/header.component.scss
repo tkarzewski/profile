@@ -2,12 +2,13 @@ h2 {
   cursor: pointer;
   border: none;
 
-  .bar-container {
-    margin: 12px 0;
+}
 
-    >span {
-      cursor: pointer;
-    }
+.bar-container {
+  margin: 12px 0;
+
+  >span {
+    cursor: pointer;
   }
 }
 

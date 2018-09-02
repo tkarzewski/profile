@@ -22,6 +22,8 @@ TODO Doc
 - **Grundlegendes**
   - (X) Update auf Angular 7beta
   - (X) Caching in die Services und aus dem Interceptor
+  - ( ) ErrorHandling
+  - ( ) Mobile Menu - Jump to Card
 - **Infrastruktur**
   - ( ) Continuous Build
   - ( ) Continuous Testing
