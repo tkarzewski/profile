@@ -6,4 +6,4 @@ COPY package.json package-lock.json tsconfig.json tslint.json ./
 
 # RUN npm install
 
-RUN cp README.md README-TEST.md
+RUN cp profile/README.md profile/README-TEST.md
