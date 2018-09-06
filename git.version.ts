@@ -1,7 +1,7 @@
-import fs = require('fs');
+// import * as fs from 'fs';
 import { Observable, combineLatest } from 'rxjs';
-// import { combineLatest } from 'rxjs/operators';
 
+const fs = require('fs');
 const { version: appVersion } = require('./package.json');
 const exec = require('child_process').exec;
 

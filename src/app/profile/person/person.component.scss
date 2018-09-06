@@ -1,5 +1,7 @@
-p {
-  font-size: larger;
+@media screen and (min-width: 1200px){
+  p {
+    font-size: larger;
+  }
 }
 
 .w3-display-container {
