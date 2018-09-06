@@ -6,4 +6,6 @@ COPY package.json package-lock.json tsconfig.json tslint.json ./
 
 RUN npm install
 
+COPY src ./src/
+
 RUN ng build --prod --base-href /profile/
