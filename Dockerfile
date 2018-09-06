@@ -4,4 +4,6 @@ WORKDIR /home/tobias_karzewski/profile
 
 COPY package.json package-lock.json tsconfig.json tslint.json ./
 
-RUN npm install
+# RUN npm install
+
+RUN cp README.md README-TEST.md
