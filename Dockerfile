@@ -8,4 +8,4 @@ RUN npm install
 
 COPY src ./src/
 
-RUN ng build --prod --base-href /profile/
+RUN ./node_modules/.bin/ng build --prod --base-href /profile/
