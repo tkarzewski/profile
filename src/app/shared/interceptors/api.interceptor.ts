@@ -25,8 +25,8 @@ export class ApiInterceptor implements HttpInterceptor {
 
     const configuredUrlRequest = req.clone({url: apiEndpoint});
 
-    // TODO Remove delay
-    return next.handle(configuredUrlRequest)
-      .pipe(delay(Math.floor((Math.random() * 10000) + 1)));
+    return next.handle(configuredUrlRequest);
+    // Delay
+    // .pipe(delay(Math.floor((Math.random() * 10000) + 1)));
   }
 }
