@@ -13,12 +13,14 @@ export class Person {
   socialMedia: SocialMedia;
   availableFrom: Date;
   availableTo: Date;
+  jobTitle: string;
 
   constructor(data?: any) {
     if (data) {
       this.name = data.name;
       this.givenName = data.givenName;
       this.nationality = data.nationality;
+      this.jobTitle = data.jobTitle;
       if (data.dateOfBirth) {
         this.dateOfBirth = new Date(data.dateOfBirth);
       }

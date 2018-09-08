@@ -1,7 +1,8 @@
 # Profile
 
-_Profile_ is just a tiny [Angular](http://www.angular.io) Webapplication to demonstrate some techniques on the one hand and to
-present me as a freelancer on the other hand. It is served on http://www.tobias-karzewski.de
+_Profile_ is just a tiny [Angular](http://www.angular.io) Webapplication to demonstrate some techniques on the one hand.
+The Focus is definitly on the frontend. On the other hand _profile_ should present me as a freelancer.
+It is served on http://www.tobias-karzewski.de
 
 This project is managed in this [Kanban board](https://github.com/tkarzewski/profile/projects/1) and
 [versioned on GitHub](https://github.com/tkarzewski/profile) 

@@ -7,28 +7,29 @@
 <div class="w3-col s7 m12 l12">
   <div class="w3-container">
     <p class="w3-hide-medium w3-hide-large"></p>
-
-    <p class="w3-hide-small w3-hide-medium">
+    <p>
       <i class="fa fa-user-alt fa-fw w3-margin-right w3-large w3-text-teal"></i>
-      Selbstständiger Softwareentwickler
+      <span *ngIf="!isLoading">{{ person.jobTitle }}</span>
+      <tk-loading-animation *ngIf="isLoading" message="Lade ..."></tk-loading-animation>
     </p>
-    <p class="w3-hide-large">
-      <i class="fa fa-user-alt fa-fw w3-margin-right w3-large w3-text-teal"></i>
-      <span>Selbstständiger </span>
-      <span style="padding-left: 39px">Softwareentwickler</span>
-    </p>
-
     <p>
       <i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i>
-      Bochum, DE
+      <span *ngIf="!isLoading">{{ person.address.city }}</span>
+      <tk-loading-animation *ngIf="isLoading" message="Lade ..."></tk-loading-animation>
     </p>
     <p>
       <i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i>
-      tobias@karzewski.de
+      <a *ngIf="!isLoading"
+         [href]="'mailto:' + person.contact.mail"
+         class="w3-text-gray">
+        {{ person.contact.mail }}
+      </a>
+      <tk-loading-animation *ngIf="isLoading" message="Lade ..."></tk-loading-animation>
     </p>
     <p>
       <i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i>
-      +49 151 15401793
+      <span *ngIf="!isLoading">{{ person.contact.phone }}</span>
+      <tk-loading-animation *ngIf="isLoading" message="Lade ..."></tk-loading-animation>
     </p>
     <hr class="w3-hide-small">
   </div>

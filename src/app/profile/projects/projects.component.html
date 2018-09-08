@@ -1,9 +1,19 @@
 <div id="projekte" class="w3-container w3-card w3-white">
-  <h2 class="w3-text-grey w3-padding-16">
-    <span class="fa fa-desktop fa-fw w3-margin-right w3-xxlarge w3-text-teal"></span>
-    Projekte <span class="w3-small">(Auszug)</span>
-  </h2>
 
+  <h3 class="w3-text-grey w3-padding-16">
+    <span class="fa fa-desktop fa-fw w3-margin-right w3-xlarge w3-text-teal"></span>
+    Projekte <span class="w3-small">(Auszug)</span>
+  </h3>
+
+
+  <!-- Loading animation -->
+  <div *ngIf="isLoading" class="w3-container">
+    <p>
+      <tk-loading-animation *ngIf="isLoading" message="Projekte werden geladen ..."></tk-loading-animation>
+    </p>
+  </div>
+
+  <!-- Iterate through projects -->
   <div *ngFor="let project of projects, let last=last" class="w3-container">
     <h5 class="w3-opacity"><b>{{ project.roles | listValues }} &nbsp; | &nbsp; {{ project.customer }}</b></h5>
     <h6 class="w3-text-teal">

@@ -23,9 +23,11 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/assets/css/loading-animation.css",
               "src/assets/css/w3.css",
               "src/styles.scss",
-              "src/profileTheme.scss"            ],
+              "src/profileTheme.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -76,6 +78,8 @@
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
+              "src/assets/css/loading-animation.css",
+              "src/assets/css/w3.css",
               "src/styles.scss",
               "src/profileTheme.scss"
             ],

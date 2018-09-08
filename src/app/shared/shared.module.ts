@@ -2,7 +2,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-import { LoaderComponent } from './components/loader/loader.component';
+import { LoadingAnimationComponent } from './components/loading-animation/loading-animation.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MobileMenuComponent } from './components/header/mobile-menu/mobile-menu.component';
@@ -19,14 +19,14 @@ import { ListValuesPipe } from './pipes/list-values.pipe';
   declarations: [
     HeaderComponent,
     FooterComponent,
-    LoaderComponent,
+    LoadingAnimationComponent,
     ListValuesPipe,
     MobileMenuComponent
   ],
   exports: [
     HeaderComponent,
     FooterComponent,
-    LoaderComponent,
+    LoadingAnimationComponent,
     ListValuesPipe
   ]
 })

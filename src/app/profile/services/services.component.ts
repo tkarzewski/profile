@@ -9,7 +9,7 @@ import { ServicesService } from './services/services.service';
 export class ServicesComponent implements OnInit {
 
   services: Array<string>;
-  isLoading;
+  isLoading: boolean;
 
   constructor(private servicesService: ServicesService) { }
 

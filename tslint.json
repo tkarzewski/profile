@@ -99,8 +99,8 @@
       "check-preblock"
     ],
 
-    "directive-selector": [true, "attribute", "mb", "camelCase"],
-    "component-selector": [true, "element", "mb", "kebab-case"],
+    "directive-selector": [true, "attribute", "tk", "camelCase"],
+    "component-selector": [true, "element", "tk", "kebab-case"],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,

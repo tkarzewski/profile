@@ -2,6 +2,7 @@ import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/c
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from '../../../environments/environment';
+import { delay } from 'rxjs/operators';
 
 @Injectable()
 export class ApiInterceptor implements HttpInterceptor {
@@ -23,6 +24,9 @@ export class ApiInterceptor implements HttpInterceptor {
     }
 
     const configuredUrlRequest = req.clone({url: apiEndpoint});
-    return next.handle(configuredUrlRequest);
+
+    // TODO Remove delay
+    return next.handle(configuredUrlRequest)
+      .pipe(delay(Math.floor((Math.random() * 10000) + 1)));
   }
 }
