@@ -3,6 +3,9 @@ import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
 import { MatInputModule } from '@angular/material';
 
+import { Angulartics2Module } from 'angulartics2';
+import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
+
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './shared/shared.module';
 
@@ -28,6 +31,7 @@ import { ApiInterceptor } from './shared/interceptors/api.interceptor';
     HttpClientModule,
     FormsModule,
     MatInputModule,
+    Angulartics2Module.forRoot([ Angulartics2GoogleTagManager ]),
     AppRoutingModule,
     SharedModule.forRoot(),
     ProfileModule
