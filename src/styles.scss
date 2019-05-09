@@ -20,6 +20,10 @@ body {
   line-height: 1.428571429;
   color: #333333;
   background-color: #fff;
+
+  zoom: 0.75;
+  -moz-transform: scale(0.75);
+  -moz-transform-origin: 0 0;
 }
 
 a {

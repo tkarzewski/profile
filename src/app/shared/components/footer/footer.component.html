@@ -5,7 +5,7 @@
     versioned on <a href="https://github.com/tkarzewski/profile"><span class="fab fa-github"></span> Github</a>
   </p>
   <p>
-    <a [routerLink]="['/impressum']" href="javascript:">Impressum</a> &nbsp; | &nbsp;
-    <a [routerLink]="['/datenschutz']" href="javascript:">Datenschutz</a>
+    <a [routerLink]="['/impressum']" (click)="scrollToTop()" href="javascript:">Impressum</a> &nbsp; | &nbsp;
+    <a [routerLink]="['/datenschutz']" (click)="scrollToTop()" href="javascript:">Datenschutz</a>
   </p>
 </footer>

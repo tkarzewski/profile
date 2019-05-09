@@ -15,10 +15,18 @@
 
   <!-- Iterate through projects -->
   <div *ngFor="let project of projects, let last=last" class="w3-container">
-    <h5 class="w3-opacity"><b>{{ project.roles | listValues }} &nbsp; | &nbsp; {{ project.customer }}</b></h5>
+    <h4>
+      {{ project.title }}
+    </h4>
+    <h5 class="w3-opacity">
+      <b>
+        {{ project.roles | listValues }} &nbsp; | &nbsp; {{ project.customer }}
+      </b>
+    </h5>
     <h6 class="w3-text-teal">
       <span class="fa fa-calendar-alt fa-fw w3-margin-right"></span>
       {{ project.fromDate | date:'MM/yyyy' }} - {{ project.toDate ? (project.toDate | date:'MM/yyyy') : 'heute' }}
+      &nbsp; | &nbsp; {{ getDuration(project) }}
     </h6>
     <p>
       {{ project.description }}

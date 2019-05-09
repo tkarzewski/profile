@@ -19,6 +19,16 @@ export class ProjectsComponent implements OnInit {
     this.loadData();
   }
 
+
+  getDuration(project: Project): string {
+    const months = (project.toDate.getMonth() - project.fromDate.getMonth() +
+      (12 * (project.toDate.getFullYear() - project.fromDate.getFullYear()))
+    ) + 1;
+
+    return (months === 1) ? '1 Monat' : months + ' Monate';
+  }
+
+
   private loadData() {
     this.isLoading = true;
     this.projectService.getProjects().subscribe(

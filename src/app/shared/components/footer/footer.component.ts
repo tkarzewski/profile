@@ -19,6 +19,10 @@ export class FooterComponent implements OnInit {
     this.loadData();
   }
 
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
   private loadData() {
     this.isLoading = true;
     this.personService.stream$().subscribe(

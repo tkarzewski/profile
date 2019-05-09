@@ -1,12 +1,12 @@
 [
   {
-    "title": "Neuentwicklung Barmenia Versicherung Tarifierung und Angebotsprozess für Krankenversicherungen",
+    "title": "Neuentwicklung Webbapplication Tarifierung und Angebotsprozess für Krankenversicherungen",
     "fromDate": "2019-01-01",
     "toDate": "2019-06-30",
     "customer": "Barmenia Versicherungen",
     "roles": ["Architektur", "Entwicklung", "Testing"],
     "description": "Architektur und Entwicklung von Taa-KV - eine Angular Anwendung zur Tarifierung (Berechnung) bestehender und neuer Krankenversicherungen der Barmenia. Routing, Anbindung ans Backend, Frontend-Entwicklung, Mocking für Offline-Development, Caching, FeatureToggles, Weiterentwickling einer Komponentenbibliothek, Warenkorb, gleichzeitiger Vergleich und Tarifierung existierender KVs, mehrschrittiger Assistent zur Erstellung und Tarifierung neuer KVs",
-    "keywords": ["Angular 7", "Angular Lib", "TypeScript", "REST-API", "HTML", "SCSS", "Bootstrap", "GitLab", "Jenkins", "IntelliJ Idea"]
+    "keywords": ["Angular 7", "Angular Lib", "TypeScript", "REST-API", "MicroServices", "HTML", "SCSS", "Bootstrap", "GitLab", "Jenkins", "IntelliJ Idea"]
   },
   {
     "title": "Neuentwicklung Kundenportal 'Meine Barmenia'",
@@ -15,7 +15,7 @@
     "customer": "Barmenia Versicherungen",
     "roles": ["Architektur", "Entwicklung", "Testing", "DevOps"],
     "description": "Architektur und Entwicklung des neuen Kundenportals 'Meine Barmenia' für Versicherte. Routing, Anbindung ans Backend, FE-Entwicklung und Tests mit Mockdaten, Entwicklung einer Komponentenbibliothek. Feature-Toggles, Configuration und LocalStorage. Mobile Optimierung der WebApp für eine HybridApp. Integration Google Analytics / Google Tag Manager. DevOp-Tätigkeiten für Continuous Build und Deployment des Frontends auf verschiedenen Umgebungen. Unterstützung bei der Einführung von Scrum",
-    "keywords": ["Angular 6", "Angular Lib", "TypeScript", "Protractor", "REST-API", "HTML", "SASS/SCSS", "Bootstrap", "GitLab", "Continuous Integration", "Jenkins", "Google Analytics / Tag Manager", "Scrum"]
+    "keywords": ["Angular 6", "Angular Lib", "TypeScript", "Protractor", "REST-API", "MicroServices", "HTML", "SASS/SCSS", "Bootstrap", "GitLab", "Continuous Integration", "Jenkins", "Google Analytics / Tag Manager", "Scrum"]
   },
   {
     "title": "Relaunch ElectronicPartner B2B Plattform- & shop",
@@ -47,7 +47,7 @@
   {
     "title": "Weiterentwicklung der Webseite rapidshare.com",
     "fromDate": "2012-10-01",
-    "toDate": "2013-30-30",
+    "toDate": "2013-06-30",
     "customer": "RapidShare AG",
     "roles": ["Architektur", "Entwicklung", "Testing"],
     "description": "Frontendarchitektur und Entwicklung der Webseite rapidshare.com mit HTML5, CSS3 und JavaScript. Aus nativen JavaScript eigenes Framework zur Anbindung einer REST-API. Umsetzung von Dateimanager, Uploader, Videoplayer, Bezahlvorgang und stat. Seiten. Dazu Configuration Management mit ANT und Automatisiertes Testen mit Selenium und Java",

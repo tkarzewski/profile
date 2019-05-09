@@ -5,7 +5,7 @@ import { Injectable, Pipe, PipeTransform } from '@angular/core';
 })
 @Injectable()
 export class ListValuesPipe implements PipeTransform {
-  transform(items: Array<any>, attribute: string): string {
+  transform(items: Array<any>, attribute?: string): string {
     let returnValue = '';
     if (Array.isArray(items) && items.length > 0) {
       let item;
