@@ -17,6 +17,7 @@ import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactService } from './contact/services/contact.service';
 import { FormsModule } from '@angular/forms';
 import { ApiInterceptor } from './shared/interceptors/api.interceptor';
+import { BrowserModule } from '@angular/platform-browser';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { ApiInterceptor } from './shared/interceptors/api.interceptor';
   ],
   imports: [
     BrowserAnimationsModule,
+    BrowserModule.withServerTransition({appId: 'tk-app'}),
     HttpClientModule,
     FormsModule,
     MatInputModule,
