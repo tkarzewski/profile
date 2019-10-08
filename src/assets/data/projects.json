@@ -1,5 +1,13 @@
 [
   {
+    "title": "Weiterentwicklung SQIS – Strategisches Quartiersinformationssystem",
+    "fromDate": "2019-07-01",
+    "customer": "InWIS Forschung und Beratung",
+    "roles": ["Architektur", "Entwicklung", "Frontend", "Backend"],
+    "description": "Architektur und Weiterentwicklung von SQIS - eine ReactJS Anwendung ähnlich Google Maps zur Analyse von Räumen, wie Städte, Stadtviertel, Quartiere, POIs oder Gebäude. Visualisierung der Karte samt diversen Layers mit leaflet.js, Anzeige diverser Daten u.a. als Diagramme mit d3.js. Umsetzung der Mandantenfähigkeit, REST-Schnittstelle, geführte Klicktour, ReDesign und diverse kleine Features und Bugfixes.",
+    "keywords": ["ReactJS", "TypeScript", "Leaflet", "d3.js", "PHP", "REST-API", "HTML", "SCSS", "Bootstrap", "GitHub", "IntelliJ Idea"]
+  },
+  {
     "title": "Neuentwicklung Webbapplication Tarifierung und Angebotsprozess für Krankenversicherungen",
     "fromDate": "2019-01-01",
     "toDate": "2019-06-30",
