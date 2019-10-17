@@ -25,7 +25,7 @@
     "@angular/platform-browser-dynamic": "^7.0.0-beta.5",
     "@angular/platform-server": "^7.2.15",
     "@angular/router": "^7.0.0-beta.5",
-    "@fortawesome/fontawesome-free": "^5.3.1",
+    "@fortawesome/fontawesome-free": "^5.11.2",
     "@nguniversal/express-engine": "^7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "^7.1.1",
     "angulartics2": "^6.3.0",
