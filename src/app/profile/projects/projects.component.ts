@@ -21,8 +21,14 @@ export class ProjectsComponent implements OnInit {
 
 
   getDuration(project: Project): string {
-    const months = (project.toDate.getMonth() - project.fromDate.getMonth() +
-      (12 * (project.toDate.getFullYear() - project.fromDate.getFullYear()))
+
+    let toDate = project.toDate;
+    if (!toDate) {
+      toDate = new Date();
+    }
+
+    const months = (toDate.getMonth() - project.fromDate.getMonth() +
+      (12 * (toDate.getFullYear() - project.fromDate.getFullYear()))
     ) + 1;
 
     return (months === 1) ? '1 Monat' : months + ' Monate';
