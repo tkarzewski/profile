@@ -1,7 +1,8 @@
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common/http';
-import { MatInputModule } from '@angular/material';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { Angulartics2Module } from 'angulartics2';
 import { Angulartics2GoogleTagManager } from 'angulartics2/gtm';
@@ -15,9 +16,8 @@ import { ProfileModule } from './profile/profile.module';
 import { ImprintComponent } from './imprint/imprint.component';
 import { PrivacyComponent } from './privacy/privacy.component';
 import { ContactService } from './contact/services/contact.service';
-import { FormsModule } from '@angular/forms';
 import { ApiInterceptor } from './shared/interceptors/api.interceptor';
-import { BrowserModule } from '@angular/platform-browser';
+import { MatInputModule } from '@angular/material/input';
 
 
 @NgModule({
@@ -33,7 +33,7 @@ import { BrowserModule } from '@angular/platform-browser';
     HttpClientModule,
     FormsModule,
     MatInputModule,
-    Angulartics2Module.forRoot([ Angulartics2GoogleTagManager ]),
+    Angulartics2Module.forRoot(),
     AppRoutingModule,
     SharedModule.forRoot(),
     ProfileModule

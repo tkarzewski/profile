@@ -2,6 +2,7 @@
   {
     "title": "Neuentwicklung SQIS Administrations Panel – Admin Dashboard für SQIS",
     "fromDate": "2019-10-01",
+    "toDate": "2020-07-31",
     "customer": "InWIS Forschung und Beratung",
     "roles": ["Architektur", "Entwicklung", "Frontend", "Backend"],
     "description": "Architektur und Entwicklung von SAP - eine Angular Anwendung zur Administration und Konfiguration von Mandanten und Benutzern. CRUD-Administration von Mandanten und Benutzern für SQIS und SAP, sowie Konfiguration von Rollen und Rechten inklusive Authentifizierung und Autorisierung. Generische Konfiguration des Designs, Klicktouren, Labels und Features von Mandanten. Dazu Frontendentwicklung und Entwicklung eines PHP-basierten Mock-Backends.",
@@ -10,6 +11,7 @@
   {
     "title": "Weiterentwicklung SQIS – Strategisches Quartiersinformationssystem",
     "fromDate": "2019-07-01",
+    "toDate": "2020-07-31",
     "customer": "InWIS Forschung und Beratung",
     "roles": ["Architektur", "Entwicklung", "Frontend", "Backend"],
     "description": "Architektur und Weiterentwicklung von SQIS - eine ReactJS Anwendung ähnlich Google Maps zur Analyse von Räumen, wie Städte, Stadtviertel, Quartiere, POIs oder Gebäude. Visualisierung der Karte samt diversen Layers mit leaflet.js, Anzeige diverser Daten u.a. als Diagramme mit d3.js. Umsetzung der Mandantenfähigkeit, REST-Schnittstelle, geführte Klicktour, ReDesign und diverse kleine Features und Bugfixes.",

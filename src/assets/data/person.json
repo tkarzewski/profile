@@ -3,7 +3,7 @@
   "givenName": "Tobias",
   "nationality": "deutsch",
   "dateOfBirth": "1981-22-22",
-  "jobTitle": "Selbstständiger Softwareentwickler",
+  "jobTitle": "Softwareentwickler",
   "address": {
     "street": "Wiemelhauser Str.",
     "houseNo": "195",
@@ -19,6 +19,6 @@
     "xingUrl": "https://www.xing.com/profile/Tobias_Karzewski",
     "gulpUrl": "https://www.gulp.de/gulp2/home/profil/na5nkpjhcl?4"
   },
-  "availableFrom": "2017-03-01",
+  "availableFrom": null,
   "availableTo": null
 }

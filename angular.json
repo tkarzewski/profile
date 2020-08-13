@@ -4,18 +4,21 @@
   "newProjectRoot": "projects",
   "projects": {
     "profile": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
+      "prefix": "tk",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "dist/profile/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
-            "tsConfig": "src/tsconfig.app.json",
             "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.app.json",
+            "aot": true,
             "assets": [
               { "glob": "**/*", "input": "./src/assets/download", "output": "/download/" },
               "src/assets",
@@ -33,19 +36,30 @@
           },
           "configurations": {
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
               "extractCss": true,
               "namedChunks": false,
-              "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
-              "fileReplacements": [
+              "budgets": [
                 {
-                  "replace": "src/environments/environment.ts",
-                  "with": "src/environments/environment.prod.ts"
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -72,10 +86,14 @@
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "src/test.ts",
-            "karmaConfig": "./karma.conf.js",
             "polyfills": "src/polyfills.ts",
-            "tsConfig": "src/tsconfig.spec.json",
-            "scripts": [],
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
+            "assets": [
+              { "glob": "**/*", "input": "./src/assets/download", "output": "/download/" },
+              "src/assets",
+              "src/favicon.ico"
+            ],
             "styles": [
               "node_modules/bootstrap/dist/css/bootstrap.css",
               "node_modules/@fortawesome/fontawesome-free/css/all.min.css",
@@ -84,66 +102,80 @@
               "src/styles.scss",
               "src/profileTheme.scss"
             ],
-            "assets": [
-              { "glob": "**/*", "input": "./src/assets/download", "output": "/download/" },
-              "src/assets",
-              "src/favicon.ico"
-            ]
+            "scripts": []
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "src/tsconfig.app.json",
-              "src/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json",
+              "e2e/tsconfig.json",
+              "tsconfig.server.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "e2e/protractor.conf.js",
+            "devServerTarget": "profile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "profile:serve:production"
+            }
           }
         },
         "server": {
           "builder": "@angular-devkit/build-angular:server",
           "options": {
-            "outputPath": "dist/server",
-            "main": "src/main.server.ts",
-            "tsConfig": "src/tsconfig.server.json"
+            "outputPath": "dist/profile/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
           },
           "configurations": {
             "production": {
+              "outputHashing": "media",
               "fileReplacements": [
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
                 }
-              ]
+              ],
+              "sourceMap": false,
+              "optimization": true
             }
           }
-        }
-      }
-    },
-    "profile-e2e": {
-      "root": "e2e",
-      "sourceRoot": "e2e",
-      "projectType": "application",
-      "architect": {
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
           "options": {
-            "protractorConfig": "./protractor.conf.js",
-            "devServerTarget": "profile:serve"
+            "browserTarget": "profile:build",
+            "serverTarget": "profile:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "profile:build:production",
+              "serverTarget": "profile:server:production"
+            }
           }
         },
-        "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
           "options": {
-            "tsConfig": [
-              "e2e/tsconfig.e2e.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "browserTarget": "profile:build:production",
+            "serverTarget": "profile:server:production",
+            "routes": [
+              "/"
             ]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }
